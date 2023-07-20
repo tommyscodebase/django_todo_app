@@ -1,0 +1,22 @@
+    <!-- Navigation Bar -->
+    <nav
+      class="bg-white transition-all-[1s] shadow-md w-10/12 rounded-2xl h-auto p-4 flex flex-row justify-around md:w-3/6"
+    >
+      <a
+        href="{% url 'home' %}"
+        class="text-gray-400 transition duration-300 ease-out hover:ease-in hover:text-blue-500 font-semibold py-1 px-3 flex items-center gap-1"
+        ><i class="bx bxs-category"></i>All Tasks</a
+      >
+      <span class="text-gray-400">|</span>
+      <a
+        href="{% url 'completed' %}"
+        class="font-semibold text-gray-400 py-1 px-3 flex items-center gap-1"
+        ><i class="bx bxs-badge-check"></i>Completed</a
+      >
+      <span class="text-gray-400">|</span>
+      <a
+        href="{% url 'remaining' %}"
+        class="font-semibold text-red-400 py-1 px-3 flex items-center gap-1"
+        ><i class="bx bxs-sad"></i>Todo</a
+      >
+    </nav>
