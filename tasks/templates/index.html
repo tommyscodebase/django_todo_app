@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Box Icons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quick ToDo</title>
+  </head>
+  <body
+    class="bg-[#cfcfcf] flex flex-col items-center justify-center gap-4 h-screen"
+  >
+    <!-- header -->
+    <header
+      class="bg-white shadow-lg w-10/12 h-auto rounded-3xl flex flex-col sm:flex-row justify-between items-center p-5 m-7 md:w-3/6"
+    >
+      <h1 class="text-blue-600 font-bold text-[40px]">Quick ToDo</h1>
+      <a
+        class="bg-blue-600 py-2 px-4 text-white font-semibold rounded-2xl text-lg mt-4 flex items-center gap-2"
+        href="./add_task.html"
+        ><i class="bx bxs-plus-circle bx-sm"></i> Add New</a
+      >
+    </header>
+    <!-- Navigation Bar -->
+    <nav
+      class="bg-white transition-all-[1s] shadow-md w-10/12 rounded-2xl h-auto p-4 flex flex-row justify-around md:w-3/6"
+    >
+      <a
+        href="./index.html"
+        class="text-blue-400 transition duration-300 ease-out hover:ease-in hover:text-blue-500 font-semibold py-1 px-3 flex items-center gap-1"
+        ><i class="bx bxs-category"></i>All Tasks</a
+      >
+      <span class="text-gray-400">|</span>
+      <a
+        href="./completed.html"
+        class="font-semibold text-gray-400 py-1 px-3 flex items-center gap-1"
+        ><i class="bx bxs-badge-check"></i>Completed</a
+      >
+      <span class="text-gray-400">|</span>
+      <a
+        href="./remaining.html"
+        class="font-semibold text-gray-400 py-1 px-3 flex items-center gap-1"
+        ><i class="bx bxs-sad"></i>Todo</a
+      >
+    </nav>
+    <!-- Tasks -->
+    <section
+      class="flex flex-1 flex-wrap justify-center gap-3 bg-[#fff0] w-10/12 md:w-11/12 h-full mb-3 rounded-2xl p-3 overflow-y-auto scrollbar-hide"
+    >
+      <!-- Task card -->
+      <div
+        class="w-[355px] flex flex-col shadow-md bg-white h-[120px] rounded-xl p-3"
+      >
+        <!-- Top -->
+        <div class="flex flex-row justify-between">
+          <!-- Left: Title and Description -->
+          <div>
+            <a href="./task_detail.html">
+              <h1 class="text-green-500 font-semibold text-xl">
+                Create a ToDo App with Django
+              </h1>
+            </a>
+            <p class="text-gray-500 text-md">
+              The app will contain the following...
+            </p>
+          </div>
+          <!-- Right: Toggle complete mode -->
+          <a href="">
+            <i class="bx bx-check-circle bx-sm text-blue-500"></i>
+            <!-- <i class='bx bxs-check-circle'></i> -->
+          </a>
+        </div>
+        <!-- Line -->
+        <hr class="border-t border-gray-200 my-2" />
+        <!-- Bottom: Time and Date | Delete -->
+        <div class="flex flex-row justify-between">
+          <h2 class="text-gray-500 font-bold">
+            Due Today <span class="font-medium text-gray-400">12:00 pm</span>
+          </h2>
+          <a href="./delete.html">
+            <i class="bx bxs-trash bx-sm text-red-500"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Box Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

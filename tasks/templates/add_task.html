@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Box Icons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quick ToDo</title>
+  </head>
+  <body
+    class="bg-[#cfcfcf] flex flex-col items-center justify-center gap-4 h-screen"
+  >
+    <!-- header -->
+    <header
+      class="bg-white shadow-lg w-10/12 h-auto rounded-3xl flex flex-col sm:flex-row justify-between items-center p-5 m-7 md:w-3/6"
+    >
+      <h1 class="text-blue-600 font-bold text-[40px]">Quick ToDo</h1>
+      <a
+        class="bg-blue-600 py-2 px-4 text-white font-semibold rounded-2xl text-lg mt-4 flex items-center gap-2"
+        href="./index.html"
+      >
+        <i class="bx bxs-home bx-sm"></i> Go Back
+      </a>
+    </header>
+    <h1 class="text-gray-500 font-bold text-[20px]">Add ToDo</h1>
+    <!-- Task Form -->
+    <form class="w-10/12 md:w-3/6 shadow-md bg-white rounded-2xl p-4">
+      <div class="mb-4">
+        <label
+          class="block text-gray-700 text-sm font-bold mb-2"
+          for="task-name"
+          >Task Name</label
+        >
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="task-name"
+          type="text"
+          placeholder="Enter task name"
+          required
+        />
+      </div>
+      <div class="mb-4">
+        <label
+          class="block text-gray-700 text-sm font-bold mb-2"
+          for="task-description"
+          >Task Description</label
+        >
+        <textarea
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="task-description"
+          placeholder="Enter task description"
+        ></textarea>
+      </div>
+      <div class="mb-4 flex">
+        <div class="mr-2">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="due-date"
+            >Due Date</label
+          >
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="due-date"
+            type="date"
+            required
+          />
+        </div>
+        <div>
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="due-time"
+            >Due Time</label
+          >
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="due-time"
+            type="time"
+            required
+          />
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          Create Task
+        </button>
+      </div>
+    </form>
+
+    <!-- Box Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>
