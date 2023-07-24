@@ -1,5 +1,5 @@
 {% include 'base.html' %}
-{% include 'completed_nav.html' %}
+{% include 'remaining_nav.html' %}
 
 {% block content %}
     <!-- Tasks -->
@@ -15,7 +15,7 @@
         <div class="flex flex-row justify-between">
           <!-- Left: Title and Description -->
           <div>
-            <a href="{% url 'task_detail' %}">
+            <a href="{% url 'task_detail' task.id %}">
               <h1 class="text-green-500 font-semibold text-xl">
                 {{ task.title }}
               </h1>
@@ -25,7 +25,7 @@
             </p>
           </div>
           <!-- Right: Toggle complete mode -->
-          <a href="">
+          <a href="{% url 'toggle_complete' task.id %}">
             <i class="bx bx-check-circle bx-sm text-blue-500"></i>
             <!-- <i class='bx bxs-check-circle'></i> -->
           </a>
@@ -37,7 +37,7 @@
           <h2 class="text-gray-500 font-bold">
             Due {{ task.due_date }} <span class="font-medium text-gray-400">{{ task.due_time }}</span>
           </h2>
-          <a href="{% url 'delete' %}">
+          <a href="{% url 'delete' task.id %}">
             <i class="bx bxs-trash bx-sm text-red-500"></i>
           </a>
         </div>

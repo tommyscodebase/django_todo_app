@@ -49,7 +49,7 @@
             Are you sure you want to delete "<span
               class="text-green-500 font-semibold text-lg"
             >
-              Create a ToDo App with Django </span
+              {{ task.title }} </span
             >"?. <br />This actioin is irreversible.
           </h2>
         </div>
@@ -58,12 +58,12 @@
         <!-- Bottom: Time and Date | Delete -->
         <div class="flex flex-row justify-around">
           <a
-            href=""
+            href="{{ request.META.HTTP_REFERER }}"
             class="py-1 px-2 bg-blue-600 rounded-xl flex items-center gap-1 text-white font-semibold"
             ><i class="bx bxs-left-arrow-circle"></i> Go Back</a
           >
           <a
-            href=""
+            href="{% url 'remove_task' task.id %}"
             class="py-1 px-2 bg-red-600 rounded-xl flex items-center gap-1 text-white font-semibold"
             ><i class="bx bxs-trash"></i> Yes, Delete</a
           >

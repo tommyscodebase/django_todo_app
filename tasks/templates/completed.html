@@ -15,7 +15,7 @@
         <div class="flex flex-row justify-between">
           <!-- Left: Title and Description -->
           <div>
-            <a href="{% url 'task_detail' %}">
+            <a href="{% url 'task_detail' task.id %}">
               <h1
                 class="text-green-500 font-semibold text-xl italic line-through"
               >
@@ -27,7 +27,7 @@
             </p>
           </div>
           <!-- Right: Toggle complete mode -->
-          <a href="">
+          <a href="{% url 'toggle_complete' task.id %}">
             <i class="bx bxs-check-circle bx-sm text-green-500"></i>
           </a>
         </div>
@@ -38,7 +38,7 @@
           <h2 class="text-blue-400 font-bold">
             Completed <i class="bx bxs-badge-check"></i>
           </h2>
-          <a href="{% url 'delete' %}">
+          <a href="{% url 'delete' task.id %}">
             <i class="bx bxs-trash bx-sm text-red-500"></i>
           </a>
         </div>
